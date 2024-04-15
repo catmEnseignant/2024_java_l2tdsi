@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Examen {
 
 	public static void main(String[] args) {
-	
-		/*
+		 /*
+		
 		//Exo 3 :
 		
 		//----------------------
@@ -46,8 +46,8 @@ public class Examen {
 				 }
 			 }
 		 }
-		 */
-
+		 
+	
 		Terrain terrain1 = new Terrain( 15 , 15 , "foncier", "Rufisque", false);
 		Terrain terrain2 = new Terrain( 30 , 25 , "bye", "Sebikotane", true);
 		
@@ -61,9 +61,9 @@ public class Examen {
 		System.out.println("-------------------------------");
 		terrain2.allouer(personne1);
 		System.out.println("La surface qui vous ai allouee est de : "+ terrain2.calculerSurface() );
-
+	*/
 	}
-	
+
 	
 
 }
