@@ -30,7 +30,9 @@ public class AppelTri
         }
 
         TriTab tab1 = new TriTab(tab);
-        tab1.tri();
+        tab1.triSelection();
+        /*Il est important de noter que la methode qui tri est doubler.
+         L'un nomme triBulles et l'autre nomme triSelection*/
         System.out.println(" ");
         System.out.println("Le tableau apres le tri:");
         tab1.Afficher();

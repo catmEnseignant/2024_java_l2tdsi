@@ -3,6 +3,7 @@ package exercice1;
 public class TriTab
 {
     private int[] tab;
+    int temp;
     public TriTab(int[] tab)
     {
         this.tab=tab;
@@ -20,7 +21,7 @@ public class TriTab
         }
     }
 
-    public void tri()
+    public void triBulle()
     {
         int m;
         boolean flag=true;
@@ -37,6 +38,21 @@ public class TriTab
                     flag=true;
                 }
             }
+        }
+    }
+    public void triSelection()
+    {
+        for (int i = 0; i < tab.length-1; i++)
+        {
+            int indice = i;
+            for (int j = 1; j < tab.length; j++) {
+                if (j != Min(indice, j)) {
+                    indice=j;
+                }
+            }
+            temp=tab[indice];
+            tab[indice]=tab[i];
+            tab[i]=temp;
         }
     }
     public void Afficher()
