@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "AppelTri",
+            "request": "launch",
+            "mainClass": "exrcice1.AppelTri",
+            "projectName": "TD_1_f9b9f378"
+        },
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
