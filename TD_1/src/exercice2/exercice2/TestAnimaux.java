@@ -26,6 +26,23 @@ public class TestAnimaux {
     
             System.out.println(achat);
             System.out.println(achien);
+
+            //Ajoutons l'instruction:
+           // System.out.println(achien.aboyer());
+
+        /*
+        Cela ne  fonctionne pas car:
+            * La méthode cri() est redéfinie dans les classes Chat et Chien pour générer des sons distincts selon l'animal (miaulement pour un chat, aboiement pour un chien).
+            Cela permet d'utiliser des objets de ces classes de manière interchangeable, la méthode cri() s'adaptant automatiquement à l'objet réel: polymorphisme.
+            Les classes Chat et Chien héritent des attributs et des méthodes de la classe Animal, y compris la méthode toString().
+            Elles peuvent ensuite redéfinir cette méthode pour fournir une description plus précise de chaque type d'animal.
+            Les variables achat et achien sont déclarées de type Animal mais référencent des objets Chat et Chien respectivement.
+            Lors de l'appel de toString(), la méthode appropriée de la classe correspondante (soit Chat soit Chien) est exécutée.
+            Ajout de l'instruction System.out.println(achien.aboyer()); : Cette instruction affiche "Haw haw !" car achien est un objet Chien et que la classe Chien définit la méthode aboyer() pour retourner cette chaîne.
+            Remarque importante : 
+            La méthode aboyer() n'est pas accessible aux objets Animal ou Chat car elle est spécifique à la classe Chien.
+           */
+    
             
         }
     }
