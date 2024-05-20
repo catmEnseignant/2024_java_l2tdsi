@@ -15,29 +15,39 @@ public class TestAnimaux {
         System.out.println(animal);
         System.out.println(chat);
         System.out.println(chien);
-        
+
         // Affichage des cris des animaux
         System.out.println(animal.Cri());
         System.out.println(chat.Cri());
-        System.out.println(chien.Aboyer()); 
+        System.out.println(chien.Cri());
+        System.out.println(chien.Aboyer());
 
         // REMARQUE
-        //Nous remarquons que la methode aboyer marche correctement meme si elle n'est pas definit dans la classe Animal
+        // Nous remarquons que lorsque nous appelons chien.Cri cela marche correctement
+        // malgre que
+        // la methode Cri n'aie pas ete redefinie dans la classe chien .Cela est du tout
+        // simplement au fait que
+        // la classe chien qui est une classe fille de la classe animal herite de tous
+        // les fonctions declarees public de cette derniere
 
-        //on considere le chat et le chien comme etant des animaux
-        Animal achat = chat ;
-        Animal achien = chien ;
-        
+        // on considere le chat et le chien comme etant des animaux
+        Animal achat = chat;
+        Animal achien = chien;
+
         System.out.println(achat);
         System.out.println(achien);
 
-    //Ajoutons
+        // Ajoutons
 
-    // System.out.println(achien.Aboyer());
+        // System.out.println(achien.Aboyer());
     }
-    //si nous ajoutons Systeme.out.println(achien.Aboyer()) ;cele affichera une erreur
-    //Explication
-    //La variable achien est déclarée de type Animal, ce qui signifie que le compilateur n'a pas connaissance des méthodes spécifiques à la classe Chien, telles que Aboyer(). 
-    //La classe Animal ne définit pas cette méthode. Donc, lorsque vous essayez d'appeler achien.aboyer(), le compilateur générera une erreur car il ne peut pas trouver la méthode Aboyer() dans la classe Animal.
+    // si nous ajoutons Systeme.out.println(achien.Aboyer()) ;cele affichera une
+    // erreur
+    // Explication
+    // La variable achien est déclarée de type Animal, ce qui signifie que le
+    // compilateur n'a pas connaissance des méthodes spécifiques à la classe Chien,
+    // telles que Aboyer().
+    // La classe Animal ne définit pas cette méthode. Donc, lorsque vous essayez
+    // d'appeler achien.aboyer(), le compilateur générera une erreur car il ne peut
+    // pas trouver la méthode Aboyer() dans la classe Animal.
 }
-
