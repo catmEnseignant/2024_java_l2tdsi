@@ -2,34 +2,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Responsable extends Employe {
-    private List<Employe> subordonnes;
+    private List<Employe> inferieursDirects;
 
-    public Responsable(String nom, String matricule, int indiceSalarial) {
+    public Responsable(String nom, String matricule, double indiceSalarial) {
         super(nom, matricule, indiceSalarial);
-        this.subordonnes = new ArrayList<>();
+        this.inferieursDirects = new ArrayList<>();
     }
 
-    public void ajouterSubordonne(Employe subordonne) {
-        subordonnes.add(subordonne);
+    public void ajouterInferieur(Employe employe) {
+        inferieursDirects.add(employe);
     }
 
     public void afficherInferieursDirects() {
-        System.out.println("Subordonnés directs de " + getNom() + ":");
-        for (Employe sub : subordonnes) {
-            sub.afficherCaracteristiques();
+        System.out.println("Inférieurs directs de " + this.nom + ":");
+        for (Employe e : inferieursDirects) {
+            e.afficherCaracteristiques();
         }
     }
 
     public void afficherInferieursIndirects() {
-        System.out.println("Subordonnés directs et indirects de " + getNom() + ":");
-        afficherInferieursIndirectsHelper(subordonnes);
+        System.out.println("Inférieurs directs ou indirects de " + this.nom + ":");
+        afficherInferieursRecursivement(this);
     }
 
-    private void afficherInferieursIndirectsHelper(List<Employe> subordonnes) {
-        for (Employe sub : subordonnes) {
-            sub.afficherCaracteristiques();
-            if (sub instanceof Responsable) {
-                ((Responsable) sub).afficherInferieursIndirectsHelper(((Responsable) sub).subordonnes);
+    private void afficherInferieursRecursivement(Responsable responsable) {
+        for (Employe e : responsable.inferieursDirects) {
+            e.afficherCaracteristiques();
+            if (e instanceof Responsable) {
+                afficherInferieursRecursivement((Responsable) e);
             }
         }
     }

@@ -1,18 +1,19 @@
 public class Commercial extends Employe {
-      private double ventesDuMois;
+      private double ventesDernierMois;
+      private double pourcentageCommission;
   
-      public Commercial(String nom, String matricule, int indiceSalarial, double ventesDuMois) {
+      public Commercial(String nom, String matricule, double indiceSalarial, double pourcentageCommission) {
           super(nom, matricule, indiceSalarial);
-          this.ventesDuMois = ventesDuMois;
+          this.pourcentageCommission = pourcentageCommission;
       }
   
-      public void mettreAJourVentes(double nouvellesVentes) {
-          this.ventesDuMois = nouvellesVentes;
+      public void mettreAJourVentes(double ventes) {
+          this.ventesDernierMois = ventes;
       }
   
       @Override
       public double calculerSalaire() {
-          return super.calculerSalaire() + 0.1 * ventesDuMois; // Exemple: 10% des ventes comme bonus
+          return super.calculerSalaire() + (ventesDernierMois * pourcentageCommission);
       }
   }
   

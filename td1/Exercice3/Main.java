@@ -1,36 +1,49 @@
 public class Main {
       public static void main(String[] args) {
           // Création des employés
-          Employe e1 = new Employe("Alice", "E001", 3);
-          Employe e2 = new Employe("Bob", "E002", 4);
-          
-          // Création d'un responsable
-          Responsable r1 = new Responsable("Charlie", "R001", 5);
-          r1.ajouterSubordonne(e1);
-          r1.ajouterSubordonne(e2);
-          
-          // Création d'un commercial
-          Commercial c1 = new Commercial("David", "C001", 2, 1000);
-          
-          // Création de l'entreprise et ajout des employés
-          Entreprise entreprise = new Entreprise();
-          entreprise.ajouterEmploye(e1);
-          entreprise.ajouterEmploye(e2);
-          entreprise.ajouterEmploye(r1);
-          entreprise.ajouterEmploye(c1);
-          
-          // Affichage des caractéristiques des employés
+          Employe e1 = new Employe("Alice", "001", 1.2);
+          Employe e2 = new Employe("Bob", "002", 1.5);
+          Employe e3 = new Employe("Charlie", "003", 1.8);
+  
+          // Création des responsables
+          Responsable r1 = new Responsable("David", "004", 2.0);
+          Responsable r2 = new Responsable("Eve", "005", 2.5);
+  
+          // Ajout des employés sous les responsables
+          r1.ajouterInferieur(e1);
+          r1.ajouterInferieur(e2);
+          r2.ajouterInferieur(e3);
+          r1.ajouterInferieur(r2);
+  
+          // Création des commerciaux
+          Commercial c1 = new Commercial("Frank", "006", 1.3, 0.05);
+          c1.mettreAJourVentes(20000);
+  
+          // Création du personnel et ajout des employés
+          Personnel personnel = new Personnel();
+          personnel.ajouterEmploye(e1);
+          personnel.ajouterEmploye(e2);
+          personnel.ajouterEmploye(e3);
+          personnel.ajouterEmploye(r1);
+          personnel.ajouterEmploye(r2);
+          personnel.ajouterEmploye(c1);
+  
+          // Affichage des informations
+          System.out.println("Salaires des employés:");
           e1.afficherCaracteristiques();
+          System.out.println("Salaire: " + e1.calculerSalaire());
+  
           e2.afficherCaracteristiques();
-          r1.afficherCaracteristiques();
+          System.out.println("Salaire: " + e2.calculerSalaire());
+  
           c1.afficherCaracteristiques();
-          
-          // Affichage des subordonnés directs et indirects
+          System.out.println("Salaire: " + c1.calculerSalaire());
+  
+          System.out.println("\nInférieurs directs et indirects de David:");
           r1.afficherInferieursDirects();
           r1.afficherInferieursIndirects();
-          
-          // Calcul et affichage de la somme des salaires
-          System.out.println("Somme des salaires à verser: " + entreprise.calculerSommeSalaires());
+  
+          System.out.println("\nSomme des salaires à verser: " + personnel.calculerSommeSalaires());
       }
   }
   

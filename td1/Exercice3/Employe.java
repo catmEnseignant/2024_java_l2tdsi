@@ -1,29 +1,28 @@
 public class Employe {
       private String nom;
       private String matricule;
-      private int indiceSalarial;
-      private static double valeurSalaire = 100; // Valeur de base pour le calcul du salaire, peut changer
+      private double indiceSalarial;
+      private static double valeurIndice = 1000.0; // Exemple de valeur pour l'indice salarial
   
-      public Employe(String nom, String matricule, int indiceSalarial) {
+      public Employe(String nom, String matricule, double indiceSalarial) {
           this.nom = nom;
           this.matricule = matricule;
           this.indiceSalarial = indiceSalarial;
       }
   
       public void afficherCaracteristiques() {
-          System.out.println("Nom: " + nom + ", Matricule: " + matricule + ", Indice Salarial: " + indiceSalarial);
+          System.out.println("Nom: " + nom);
+          System.out.println("Matricule: " + matricule);
+          System.out.println("Indice Salarial: " + indiceSalarial);
       }
   
       public double calculerSalaire() {
-          return indiceSalarial * valeurSalaire;
+          return indiceSalarial * valeurIndice;
       }
   
-      public static void setValeurSalaire(double nouvelleValeurSalaire) {
-          valeurSalaire = nouvelleValeurSalaire;
-      }
-  
-      public String getNom() {
-          return nom;
+      public static void setValeurIndice(double nouvelleValeur) {
+          valeurIndice = nouvelleValeur;
       }
   }
+
   
