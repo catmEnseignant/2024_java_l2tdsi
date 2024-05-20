@@ -1,6 +1,6 @@
 package exercice1;
 
-public class Test {
+public class TestLiquide {
     public static void main(String[] args)
     {
         Tasse[] tasse = new Tasse[3];
