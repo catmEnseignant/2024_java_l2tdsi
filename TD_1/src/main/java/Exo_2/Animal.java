@@ -2,12 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.td_1;
+package Exo_2;
 
 /**
  *
  * @author HP
  */
-public class TriTab {
-    
+public class Animal {
+    public String cri()
+    {
+        return "";
+    }
+
+    public String toString()
+    {
+        return "Je suis un animal";
+    }
 }
