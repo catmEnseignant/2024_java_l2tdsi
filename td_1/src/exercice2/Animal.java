@@ -1,4 +1,4 @@
-package exercice3;
+package exercice2;
 
 public class Animal
 {

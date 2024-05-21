@@ -1,4 +1,4 @@
-package exercice2;
+package exercice1;
 
 public class Tasse {
     private Liquide l;

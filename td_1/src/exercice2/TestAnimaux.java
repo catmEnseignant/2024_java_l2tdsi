@@ -1,4 +1,4 @@
-package exercice3;
+package exercice2;
 
 public class TestAnimaux {
     public static void main(String[] args) {
@@ -25,5 +25,25 @@ public class TestAnimaux {
 
         System.out.println(achat);
         System.out.println(achien);
+
+        // Ajout de l'instruction System.out.println(achien.aboyer);
+        /*
+        if (achien instanceof Chien)
+        {
+            System.out.println((Chien) achien.aboyer());
+        }
+        else
+        {
+            System.out.println("achien n'est pas une instance de chien.");
+        }
+        */
+
+
+        /*
+            Cela ne marche pas Car achien est declaré comme animal donc n'est pas une instance de Chien et vu que
+            chien est un animal on peut l'affecter à chien mais achien ne pourra pas hériter des methode
+            de Chien mais de animal.
+            Il pourra utiliser les methodes de Chien lorsqu'on fera un casting explicite.
+        */
     }
 }

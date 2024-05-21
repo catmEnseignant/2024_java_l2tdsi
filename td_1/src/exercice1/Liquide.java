@@ -1,8 +1,6 @@
-package exercice2;
+package exercice1;
 
 public class Liquide {
-    int temperature;
-
     public void imprimer()
     {
         System.out.println("Je suis un Liquide.");

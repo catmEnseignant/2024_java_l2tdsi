@@ -1,6 +1,6 @@
-package exercice2;
+package exercice1;
 import java.lang.*;
-public class Main {
+public class TestLiquide {
     public static void main(String[] args)
     {
         Tasse[] tasse = new Tasse[3];
