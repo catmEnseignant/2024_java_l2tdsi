@@ -1,0 +1,9 @@
+Si vous essayez d'ajouter l'instruction System.out.println(achien.aboyer()); 
+à la fin du code, cela ne fonctionnera pas directement. 
+
+achien est une référence de type Animal, mais son type réel est Chien.
+La méthode aboyer est définie dans la classe Chien, mais pas dans la classe Animal.
+En Java, vous ne pouvez appeler que les méthodes disponibles dans le type référencé de l'objet.
+Puisque Animal n'a pas de méthode aboyer, vous ne pouvez pas l'appeler directement sur une
+ référence de type Animal, même si l'objet référencé est un Chien.
+ 
