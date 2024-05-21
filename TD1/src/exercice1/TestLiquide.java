@@ -2,7 +2,7 @@ package exercice1;
 
 public class TestLiquide {
     public static void main(String[] args) {
-        
+
         Liquide eau = new Liquide();
         Cafe cafe = new Cafe();
         Lait lait = new Lait();
