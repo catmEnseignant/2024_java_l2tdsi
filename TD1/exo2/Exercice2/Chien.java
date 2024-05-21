@@ -1,0 +1,18 @@
+// TD/exercice2/Chien.java
+package Exercice2;
+
+public class Chien extends Animal {
+    @Override
+    public String toString() {
+        return "Je suis un chien !";
+    }
+
+    public String aboyer() {
+        return "Haw haw !";
+    }
+    
+    @Override
+    public String cri() {
+        return aboyer();
+    }
+}
