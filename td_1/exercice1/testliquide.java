@@ -1,4 +1,4 @@
-public class testliquide {
+public class testliquide { // 2/2 : Il faut mettre la première lettre en majuscule pour le nom d'une classe
         public static void main(String[] args) {
         tasse[] tasses = new tasse[3];
 
